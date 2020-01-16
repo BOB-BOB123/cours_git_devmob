@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cours GIT</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"  href="style.css">
+</head>
+<body>
+	<h1>Cours GIT</h1>
+	<h2> Qu'est-ce que GIT</h2>
+	<p> Git est un outil de versionning et permet d'avoir une traçabilité et un historique de tous les fichiers du projet.</p>
+	<p>il permet également de travailler en equipe : envoyer nos modification aux collegues et recuperer les modifications des collegues.</p>
+	<p>Dans la traçabilité des fichiers, GIT nous donne toujours 3 infos: Qui, Quand et Pourquoi ?</p>
+
+	<h3>Installer et configurer GIT</h3>
+
+	url: https://git-csm.com
+
+ <div class="cmd">git config --global user.mail 'hakim.bw@gmail.com'</div>
+ <div class="cmd">git config --global user.name 'hakim'</div>
+
+<h1> Les commandes de base</h1> <br><br>
+
+initialiser un projet
+<div class="cmd">git init</div><br>
+
+voir le statut des fichiers
+<div class="cmd">git statut</div><br>
+
+ajouter des fichiers 
+<div class="cmd">git add'fichier'</div><br>
+
+ajouter TOUT LES FICHIERS:
+<div class="cmd">git add.</div><br>
+
+commit(enregistrer) les fichiers ajoutés 
+<div class="cmd">git commit</div>
+<div class="warning"> un commit necessite toujours un nmessage </div><br>
+
+commit avec message:
+<div class="cmd">git commit -m "message"</div><br>
+
+commit avec add+message:
+<div class="cmd">git commit -a -m "message"</div><br>
+
+commit avec add + message (fonctionne sur les fichiers deja add précédemment):
+<div class="cmd">git commit -a -m "message"</div><br>
+
+<h4>Correction des fichiers</h4>
+
+voir les differents commit:
+<div class="cmd">git log</div><br>
+corriger les modification sur un fichier (pas encore add):
+<div class="cmd">git checkout 'fichier'</div><br>
+
+supprime un add:
+<div class="cmd">git rest'fichier'</div><br>
+<div class="cmd">git rest.</div><br>
+
+supprimer le dernier commit:
+<div class="cmd">git rest HEAD^</div><br>
+
+Supprimer les deux derniers commit:
+<div class="cmd">git rest HEAD^^</div><br>
+
+
+
+<h1> La notion de brache </h1>
+
+<p>une branche est une copie paralelle du projet. elle permet de devolopper en paraleLle de nouvelles fonCtionnalités, lorsqu'on considere des nouveautés operationnelles, on peut les rappatrier sur la version principale qu'on appelle la branche "Master".</p>
+
+Voir les branches:
+<div class="cmd">git branch</div><br>
+
+Creer une nouvelle branche:
+<div class="cmd">git branch'nom'</div><br>
+
+Se placer sur une branche:
+<div class="cmd">git checkout 'nom'</div><br>
+
+Voir les différences entre deux branches:
+<div class="cmd">git diff 'nom'..master</div><br>
+
+APPORTER les modifications effctués sur une brache dans MASTER
+(il faut etre sur master)
+<div class="cmd">git checkout master</div>
+<div class="cmd">git merge.'nom'</div><br>
+
+REMPLACER master par une branche:
+<div class="cmd">git checkout master</div>
+<div class="cmd">git fetch.'nom'</div>
+<div class="warning"> Le fetch va literalLement remplacer master par la braNche. Il s'agit donc d'une grosse modification dans le projet (ex: version 2)</div>
+
+
+
+<h1> Repertoire distant et GIHUB</h1>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.cmd{
+	color: chartreuse;
+	background: black;
+	padding: 5px;
+	margin: 10px;
+
+}
+
+.cmd.before{
+	content: 'cmd >'
+}
+
+.warning{
+	padding: 5px;
+	color: red:
+	background: pink;
+	border: 1px solid red:
+	border-redius: 3px;
+
+
+}
+
+.warning:before{
+	content: attention
+}
